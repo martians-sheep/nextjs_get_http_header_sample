@@ -1,7 +1,7 @@
 # Next.js AppRouter Http Header 取得方法のサンプル
 
 Next.js で AppRouter で Http Header を取得する方法のサンプルです。
-headerListの中身が無いと勘違いして詰まったので、サンプルを作成しました。
+`next/header`の`headers()`で取得したheadersListの中身が無いと勘違いして詰まったので、サンプルを作成しました。
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
