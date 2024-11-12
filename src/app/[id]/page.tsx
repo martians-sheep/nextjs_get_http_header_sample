@@ -1,13 +1,20 @@
-import { headers, cookies } from "next/headers";
+import { headers } from "next/headers";
 import Image from "next/image";
-import { getHeaders } from "./util";
+import { getHeaders } from "../util";
 
-export default async function Home() {
-  console.log("[home] page.tsx");
+export default async function Home({
+  params,
+}: {
+  params: {
+    id: string;
+  };
+}) {
+  console.log("dynamic[id] page.tsx");
   await getHeaders();
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <h1>{params.id}</h1>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
